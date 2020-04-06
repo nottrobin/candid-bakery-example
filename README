@@ -1,0 +1,10 @@
+Run the server:
+    env FLASK_APP=server.py flask run
+
+Run the client:
+    python client.py login
+
+(after a first login, macaroons are stored in the filesystem and reused in
+next requests, so trying the login command again will hit the server,
+verify the macaroons and immediately return with the logged in user
+information, without going through candid)
